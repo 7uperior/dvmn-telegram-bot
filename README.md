@@ -16,7 +16,7 @@ This Telegram bot is designed to periodically check for updates on lesson status
 
 ### Installation
 1. Clone the repository: 
-`git clone <repository-url>`
+`git clone https://github.com/7uperior/dvmn-telegram-bot.git`
 2. Navigate to the cloned directory:
    `cd dvmn-telegram-bot`
 3. Install dependencies using Poetry:
