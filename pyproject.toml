@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "dvmn-telegram-bot"
+version = "0.1.0"
+description = "A Telegram bot to check for updates on DVMN.org lesson statuses."
+authors = ["Vadim Surin <7uperior@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+python-telegram-bot = "^13"
+python-dotenv = "^1.0.0"
+requests = "^2.31.0"
+
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
