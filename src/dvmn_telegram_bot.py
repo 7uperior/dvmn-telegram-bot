@@ -35,7 +35,6 @@ def main():
             params = {"timestamp_to_request": timestamp}
             response = requests.get(url, headers=headers, timeout=60, params=params)  # noqa: E501
             response.raise_for_status()
-            data = response.json()
             timestamp_now = response.json()["new_attempts"][0]["timestamp"]
 
             if timestamp_now > timestamp:
@@ -45,7 +44,7 @@ def main():
                 lesson_name = response.json()["new_attempts"][0]["lesson_title"]
                 lesson_url = response.json()["new_attempts"][0]["lesson_url"]
 
-                if data["new_attempts"][0]["is_negative"]:
+                if response.json()["new_attempts"][0]["is_negative"]:
                     lesson_status = "К сожалению, в работе нашлись ошибки. "
                 else:
                     lesson_status = "Преподавателю все понравилось, можете приступать к следующему уроку!"  # noqa: E501
